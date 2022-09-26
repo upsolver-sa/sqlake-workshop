@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: SQLake Workshop
+theme:
+  name: material
+#theme:
+#    name: bootstrap
+nav:
+    - Home: index.md
+    - About: about.md
