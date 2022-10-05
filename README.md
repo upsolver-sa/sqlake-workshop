@@ -1,1 +1,0 @@
-# sqlake-workshop
