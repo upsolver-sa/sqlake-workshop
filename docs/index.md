@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Upsolver Self-Guided SQLake Hands-On Labs
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
