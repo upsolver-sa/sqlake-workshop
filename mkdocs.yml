@@ -2,6 +2,7 @@
 site_name: SQLake Workshop
 theme:
   name: material
+  logo: assets/UpsolverAlien.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -10,7 +11,7 @@ theme:
         name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
