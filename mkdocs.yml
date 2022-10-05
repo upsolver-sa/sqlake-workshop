@@ -2,6 +2,7 @@
 site_name: SQLake Workshop
 theme:
   name: material
+  favicon: assets/UpsolverAlienSmall.png
   logo: assets/UpsolverAlienSmall.png
   palette:
     # Palette toggle for automatic mode
