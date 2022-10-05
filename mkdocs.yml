@@ -2,6 +2,8 @@
 site_name: SQLake Workshop
 theme:
   name: material
+  palette:
+    scheme: slate
   features:
     - navigation.instant
     - navigation.tracking
