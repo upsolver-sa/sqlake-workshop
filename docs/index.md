@@ -51,8 +51,8 @@ Continuing to the right, there is a SQL Snippet button to include common code bl
 Catalog - Displays available connections
 
 * By default, every user has two connections
-  * default_glue_catalog
-  * SystemTables
+    ** default_glue_catalog
+    ** SystemTables
 
 Types of connections
 
@@ -71,9 +71,12 @@ Help and documentation
 * Contact support if something doesn’t work as expected
 
 
-| Text Header | Image Header |
+| Help and documentation |  |
 :--- | ---:
-| Help and documentation | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) |
+| * Searchable documentation
+ * Ask general questions on Slack
+ * Contact support if something doesn’t work as expected | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) |
+
 ---
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
