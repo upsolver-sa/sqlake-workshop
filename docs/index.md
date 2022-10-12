@@ -73,9 +73,7 @@ Help and documentation
 
 | Help and documentation |  |
 :--- | ---:
-| * Searchable documentation
- * Ask general questions on Slack
- * Contact support if something doesn’t work as expected | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) |
+| * Searchable documentation<br> * Ask general questions on Slack<br> * Contact support if something doesn’t work as expected | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) |
 
 ---
 
