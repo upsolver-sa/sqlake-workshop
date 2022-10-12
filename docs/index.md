@@ -17,9 +17,13 @@ The Kappa architecture has several benefits:
 
 At the end of each lab, we will propose some additional self-guided exercises that you may complete if you wish to expand your learning of Upsolver.
 
+---
+
 ## Let's Get Started - [Sign-up](https://sqlake.upsolver.com/signup)
 Navigate to the sign-up page, and click the 'Sign Up' link at the bottom of the Log in window.
 ![Signup Window](/sqlake-workshop/img/Signup.png "SQLake Signup Dialog")
+
+---
 
 ## Exercise 1
 Now lets build our first pipeline.  In this pipeline, we are going to be taking some streaming data from an S3 bucket that Upsolver provides.  We will ingest that raw data into a staging table, where we store an immutable copy of it in its raw form, catalog its structure and metadata, and make it accessible for querying and downstream processing.  We will then create a series of transformations on this raw data, and query that transformed data with Athena.
@@ -42,6 +46,34 @@ The center of the title bar shows you the worksheet that you are currently worki
 
 Continuing to the right, there is a SQL Snippet button to include common code blocks into your worksheet, and finally a “Preview Job” and “Run” button that we will see in action later in the workshop.
 
+![SQLake UI Catalog View](/sqlake-workshop/img/img1e.png)
+
+Catalog - Displays available connections
+
+* By default, every user has two connections
+  * default_glue_catalog
+  * SystemTables
+
+Types of connections
+
+* GLUE_CATALOG
+* S3
+* KINESIS
+* KAFKA
+* SNOWFLAKE
+
+![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png)
+
+Help and documentation
+
+* Searchable documentation
+* Ask general questions on Slack
+* Contact support if something doesn’t work as expected
+
+
+| Text Header | Image Header |
+:--- | ---:
+| Help and documentation | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) |
 ---
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
