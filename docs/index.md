@@ -3,8 +3,11 @@
 ## Welcome to Upsolver SQLake
 
 SQLake is ...
+
 The initial lab will take around 20 minutes, and includes a general walkthrough, a brief tour of the user interface, and creation of your first pipeline.  From there, you can continue on to additional labs will walk you through the power of Upsolver's streaming ETL capabilities along with it's [Kappa architecture](https://www.oreilly.com/radar/questioning-the-lambda-architecture/).
+
 The Kappa architecture has several benefits:
+
 * Handle all batch and streaming use cases with a single architecture (say "no" to Lambda architecture)
 * One codebase that is always in sync
 * One set of infrastructure and technology
@@ -20,18 +23,18 @@ Navigate to the sign-up page, and click the 'Sign Up' link at the bottom of the 
 
 ## Exercise 1
 Now lets build our first pipeline.  In this pipeline, we are going to be taking some streaming data from an S3 bucket that Upsolver provides.  We will ingest that raw data into a staging table, where we store an immutable copy of it in its raw form, catalog its structure and metadata, and make it accessible for querying and downstream processing.  We will then create a series of transformations on this raw data, and query that transformed data with Athena.
-![Excercise diagram](/sqlake-workshop/Exercise1/img1a.png "Diagram of exercise 1")
+![Excercise diagram](/sqlake-workshop/exercise1/img1a.png "Diagram of exercise 1")
 
 Upon first login, you are presented with an introduction to the platform.  Feel free to step through the wizard until you get to the “Done” button.  
-![SQLake Greeting](/sqlake-workshop/Exercise1/img1b.png)
+![SQLake Greeting](/sqlake-workshop/exercise1/img1b.png)
 
 When you finish the initial wizard you are presented with a set of out of the box templates.  These templates can serve as introductions to common pipeline use cases that you may wish to explore.  The “Templates with Sample Data” section, include everything that you need to build a full end to end pipeline, and is where we will start.  The other templates provided will require you to connect to your own data sources, i.e. Kinesis or Kafka, streams, but include example scripts and commands to work with whatever data that you have available.
 In this lab, we are going to start with the S3 to Athena (sample data) template.
-![SQLake Templates](/sqlake-workshop/img/Exercise1/img1c.png)
+![SQLake Templates](/sqlake-workshop/exercise1/img1c.png)
 
 ### UI walkthrough
 Before we get into the template itself, lets walk through the core components of the UI.  
-![SQLake UI Explanation](/sqlake-workshop/img/Exercise1/img1d.png)
+![SQLake UI Explanation](/sqlake-workshop/exercise1/img1d.png)
 
 There is a back button in the upper left hand corner of the screen that you can use to go back to your worksheets list, choose a different template to work with, or navigate to other sections of the SQLake UI.
 
