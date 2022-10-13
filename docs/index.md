@@ -48,10 +48,10 @@ Continuing to the right, there is a SQL Snippet button to include common code bl
 
 | Catalog - Displays available connections |  |
 :--- | ---:
-| * By default, every user has two connections<br>Types of connections<br>* GLUE_CATALOG<br>* S3<br>* KINESIS<br>* KAFKA<br>* SNOWFLAKE<br> | ![SQLake UI Catalog View](/sqlake-workshop/img/img1e.png) |
+| * By default, every user has two connections<br>Types of connections<br> * GLUE_CATALOG<br> * S3<br> * KINESIS<br> * KAFKA<br> * SNOWFLAKE<br> | ![SQLake UI Catalog View](/sqlake-workshop/img/img1e.png) |
 
 | Help and documentation |  |
-:--- | ---:
+:--- | :---
 | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) | * Searchable documentation<br> * Ask general questions on Slack<br> * Contact support if something doesn’t work as expected |
 
 >Our Sample Data<br>
@@ -75,6 +75,36 @@ CREATE S3 CONNECTION upsolver_s3_samples
 > Place your cursor within the command and click the Run button in the upper right
 Click the + button to the left of the line number, and select “Run Statement”
 > Press a keyboard shortcut (i.e. *<command + enter>* on Mac or *<control + enter>* on Windows
+
+**Browse Newly Created Connection**
+
+With your connection created, you will see it appear in the catalog view on the left.  Browse through the connection, noticing the bucket/folder structure of the sample data.
+
+![Catalog Update](/sqlake-workshop/img/img1g.png)
+
+Step 2: Create a staging table for data ingestion
+
+With our source connection created, scroll down to Step 2 in the worksheet, where we will create our staging table to load our raw data into.  Creating this table is as simple as giving your table a name, and choosing how you want your data to be partitioned.  We do not have to define the full schema of the table, as it will be built out as streaming data is ingested.  
+
+In most use cases, staging tables will be partitioned by the $event_date system column, which is the timestamp of when the incoming event was processed.
+
+```sql
+/*
+   2. Create an empty table to use as staging for the raw data.
+*/
+CREATE TABLE default_glue_catalog.database_714130.orders_raw_data()
+   PARTITIONED BY $event_date;
+```
+
+> Go ahead and run this command, and view your newly created staging table in the catalog view.
+
+**View Your Table in the Catalog**
+
+Notice that since your table is empty, there are no columns, other than two system columns.
+
+![Catalog orders_raw_data Table](/sqlake-workshop/img/img1h.png)
+
+
 
 ---
 
