@@ -1,0 +1,645 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/UpsolverAlienSmall.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>SQLake Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#upsolver-self-guided-sqlake-hands-on-labs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="SQLake Workshop" class="md-header__button md-logo" aria-label="SQLake Workshop" data-md-component="logo">
+      
+  <img src="assets/UpsolverAlienSmall.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SQLake Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upsolver Self-Guided SQLake Hands-On Labs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Upsolver Self-Guided SQLake Hands-On Labs
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="SQLake Workshop" class="md-nav__button md-logo" aria-label="SQLake Workshop" data-md-component="logo">
+      
+  <img src="assets/UpsolverAlienSmall.png" alt="logo">
+
+    </a>
+    SQLake Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Upsolver Self-Guided SQLake Hands-On Labs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Upsolver Self-Guided SQLake Hands-On Labs
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-upsolver-sqlake" class="md-nav__link">
+    Welcome to Upsolver SQLake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-get-started-sign-up" class="md-nav__link">
+    Let's Get Started - Sign-up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    Exercise 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-walkthrough" class="md-nav__link">
+    UI walkthrough
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-connection-to-s3" class="md-nav__link">
+    Step 1: Create connection to S3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-staging-table-for-data-ingestion" class="md-nav__link">
+    Step 2: Create a staging table for data ingestion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-your-ingestion-job" class="md-nav__link">
+    Step 3: Create your ingestion job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#musical-interlude" class="md-nav__link">
+    Musical Interlude
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-upsolver-sqlake" class="md-nav__link">
+    Welcome to Upsolver SQLake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lets-get-started-sign-up" class="md-nav__link">
+    Let's Get Started - Sign-up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-1" class="md-nav__link">
+    Exercise 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercise 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-walkthrough" class="md-nav__link">
+    UI walkthrough
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-connection-to-s3" class="md-nav__link">
+    Step 1: Create connection to S3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-staging-table-for-data-ingestion" class="md-nav__link">
+    Step 2: Create a staging table for data ingestion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-your-ingestion-job" class="md-nav__link">
+    Step 3: Create your ingestion job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#musical-interlude" class="md-nav__link">
+    Musical Interlude
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="upsolver-self-guided-sqlake-hands-on-labs">Upsolver Self-Guided SQLake Hands-On Labs</h1>
+<h2 id="welcome-to-upsolver-sqlake">Welcome to Upsolver SQLake</h2>
+<p>SQLake is ...</p>
+<p>The initial lab will take around 20 minutes, and includes a general walkthrough, a brief tour of the user interface, and creation of your first pipeline.  From there, you can continue on to additional labs will walk you through the power of Upsolver's streaming ETL capabilities along with it's <a href="https://www.oreilly.com/radar/questioning-the-lambda-architecture/">Kappa architecture</a>.</p>
+<p>The Kappa architecture has several benefits:</p>
+<ul>
+<li>Handle all batch and streaming use cases with a single architecture (say "no" to Lambda architecture)</li>
+<li>One codebase that is always in sync</li>
+<li>One set of infrastructure and technology</li>
+<li>The infrastructure is near real-time, scalable, reliable (idempotent), and cost effective</li>
+<li>Improved data quality with guaranteed ordering and no mismatches (exactly-once processing guarantee)</li>
+<li>No need to re-architect for new use cases</li>
+</ul>
+<p>At the end of each lab, we will propose some additional self-guided exercises that you may complete if you wish to expand your learning of Upsolver.</p>
+<hr />
+<h2 id="lets-get-started-sign-up">Let's Get Started - <a href="https://sqlake.upsolver.com/signup">Sign-up</a></h2>
+<p>Navigate to the sign-up page, and click the 'Sign Up' link at the bottom of the Log in window.
+<img alt="Signup Window" src="/sqlake-workshop/img/Signup.png" title="SQLake Signup Dialog" /></p>
+<hr />
+<h2 id="exercise-1">Exercise 1</h2>
+<p>Now lets build our first pipeline.  In this pipeline, we are going to be taking some streaming data from an S3 bucket that Upsolver provides.  We will ingest that raw data into a staging table, where we store an immutable copy of it in its raw form, catalog its structure and metadata, and make it accessible for querying and downstream processing.  We will then create a series of transformations on this raw data, and query that transformed data with Athena.
+<img alt="Excercise diagram" src="/sqlake-workshop/img/img1a.png" title="Diagram of exercise 1" /></p>
+<p>Upon first login, you are presented with an introduction to the platform.  Feel free to step through the wizard until you get to the “Done” button.<br />
+<img alt="SQLake Greeting" src="/sqlake-workshop/img/img1b.png" /></p>
+<p>When you finish the initial wizard you are presented with a set of out of the box templates.  These templates can serve as introductions to common pipeline use cases that you may wish to explore.  The “Templates with Sample Data” section, include everything that you need to build a full end to end pipeline, and is where we will start.  The other templates provided will require you to connect to your own data sources, i.e. Kinesis or Kafka, streams, but include example scripts and commands to work with whatever data that you have available.
+In this lab, we are going to start with the S3 to Athena (sample data) template.
+<img alt="SQLake Templates" src="/sqlake-workshop/img/img1c.png" /></p>
+<h3 id="ui-walkthrough">UI walkthrough</h3>
+<p>Before we get into the template itself, lets walk through the core components of the UI.<br />
+<img alt="SQLake UI Explanation" src="/sqlake-workshop/img/img1d.png" /></p>
+<p>There is a back button in the upper left hand corner of the screen that you can use to go back to your worksheets list, choose a different template to work with, or navigate to other sections of the SQLake UI.</p>
+<p>The center of the title bar shows you the worksheet that you are currently working with.  This current worksheet was based on the template that we chose.  The down arrow next to the worksheet name provides a menu that allows you to rename your worksheet, duplicate it (often used to create backup copies), download your worksheet as a SQL file, delete your worksheet, or make it public.  Worksheets are private by default, only visible to you, but if you have multiple users in the same organization, you can share worksheets with others by making them public.</p>
+<p>Continuing to the right, there is a SQL Snippet button to include common code blocks into your worksheet, and finally a “Preview Job” and “Run” button that we will see in action later in the workshop.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Catalog - Displays available connections</th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">* By default, every user has two connections<br>Types of connections<br> * GLUE_CATALOG<br> * S3<br> * KINESIS<br> * KAFKA<br> * SNOWFLAKE<br></td>
+<td align="right"><img alt="SQLake UI Catalog View" src="/sqlake-workshop/img/img1e.png" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left">Help and documentation</th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><img alt="SQLake Learn &amp; Explore" src="/sqlake-workshop/img/img1f.png" /></td>
+<td align="left">* Searchable documentation<br> * Ask general questions on Slack<br> * Contact support if something doesn’t work as expected</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Our Sample Data<br>
+The sample data that we will use throughout this exercise is streaming orders data from a fictional e-commerce website.  We are working as data engineers and being asked to transform this data for a variety of purposes while populating a data lake for historical reporting</p>
+</blockquote>
+<p><strong>Take a look at your Worksheet (Template)</strong></p>
+<h3 id="step-1-create-connection-to-s3">Step 1: Create connection to S3</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm">   1. Create an S3 connection to manage IAM credentials for jobs that need to access data in S3</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm">*/</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">S3</span><span class="w"> </span><span class="k">CONNECTION</span><span class="w"> </span><span class="n">upsolver_s3_samples</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">   </span><span class="n">AWS_ROLE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;arn:aws:iam::949275490180:role/upsolver_samples_role&#39;</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">   </span><span class="n">EXTERNAL_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SAMPLES&#39;</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">   </span><span class="n">READ_ONLY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">TRUE</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<blockquote>
+<p>To run a command:
+Place your cursor within the command and click the Run button in the upper right
+Click the + button to the left of the line number, and select “Run Statement”
+Press a keyboard shortcut (i.e. <em><command + enter></em> on Mac or <em><control + enter></em> on Windows</p>
+</blockquote>
+<p><strong>Browse Newly Created Connection</strong></p>
+<p>With your connection created, you will see it appear in the catalog view on the left.  Browse through the connection, noticing the bucket/folder structure of the sample data.</p>
+<p><img alt="Catalog Update" src="/sqlake-workshop/img/img1g.png" /></p>
+<h3 id="step-2-create-a-staging-table-for-data-ingestion">Step 2: Create a staging table for data ingestion</h3>
+<p>With our source connection created, scroll down to Step 2 in the worksheet, where we will create our staging table to load our raw data into.  Creating this table is as simple as giving your table a name, and choosing how you want your data to be partitioned.  We do not have to define the full schema of the table, as it will be built out as streaming data is ingested.  </p>
+<p>In most use cases, staging tables will be partitioned by the $event_date system column, which is the timestamp of when the incoming event was processed.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/*</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm">   2. Create an empty table to use as staging for the raw data.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm">*/</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">default_glue_catalog</span><span class="p">.</span><span class="n">database_714130</span><span class="p">.</span><span class="n">orders_raw_data</span><span class="p">()</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">   </span><span class="n">PARTITIONED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="err">$</span><span class="n">event_date</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<blockquote>
+<p>Go ahead and run this command, and view your newly created staging table in the catalog view.</p>
+</blockquote>
+<p><strong>View Your Table in the Catalog</strong></p>
+<p>Notice that since your table is empty, there are no columns, other than two system columns.</p>
+<p><img alt="Catalog orders_raw_data Table" src="/sqlake-workshop/img/img1h.png" /></p>
+<h3 id="step-3-create-your-ingestion-job">Step 3: Create your ingestion job</h3>
+<p>A COPY FROM job takes data from a source connection, and loads it into a staging table. This job instructs SQLake to ingest data from our S3 source, and write it into our staging table.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/*</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm">   3. Ingest raw data from your bucket into the staging table</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm">*/</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">JOB</span><span class="w"> </span><span class="n">load_orders_raw_data_from_s3</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">   </span><span class="n">CONTENT_TYPE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JSON</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">   </span><span class="k">AS</span><span class="w"> </span><span class="k">COPY</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">S3</span><span class="w"> </span><span class="n">upsolver_s3_samples</span><span class="w"> </span><span class="n">BUCKET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;upsolver-samples&#39;</span><span class="w"> </span><span class="k">PREFIX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;orders/&#39;</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">   </span><span class="k">INTO</span><span class="w"> </span><span class="n">default_glue_catalog</span><span class="p">.</span><span class="n">database_714130</span><span class="p">.</span><span class="n">orders_raw_data</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+we are defining the incoming CONTENT_TYPE as JSON.  Upsolver supports many common data types such as JSON, CSV, TSV, AVRO, PARQUET, XML, ORC, etc…</p>
+<p>The BUCKET and PREFIX parameters simply tell the ingestion job where to find the incoming data within the provided S3 connection.</p>
+<p>All other parameters are left as default, with a <a href="https://docs.upsolver.com/sqlake/sql-command-reference/sql-jobs/create-job/copy-from/s3-options">full list available in the documentation</a>.  Parameters exist to tell the ingestion job how the ingested data is partitioned at the source, whether the data is compressed or not, and how far back in time to ingest the data.</p>
+<blockquote>
+<p>Notice the COPY FROM syntax within the job.  There are other types of jobs that we will create later in this workshop depending on what action the job is taking.</p>
+</blockquote>
+<h3 id="musical-interlude">Musical Interlude</h3>
+<p>While your job begins to ingest and process data, let's take a minute just to explain a little about what’s happening behind the scenes:</p>
+<ul>
+<li>SQLake is ingesting raw S3 files a breaking them down minute-by-minute in a micro-batch, or stream-based process.  </li>
+<li>As data is ingested and processed, standard Parquet files are being created in the target S3 bucket where you defined your staging table.  </li>
+<li>These files are partitioned by date (default configurable), and continuously compacted in the background for efficient, optimized downstream use.  </li>
+<li>As data is being ingested, SQLake is also identifying and storing statistics and metadata that describe the incoming data, which we can take a look at to assist in building out transformations.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Refresh the table to see data columns</th>
+<th align="center">Click on the table name, and expand the properties pane</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="Refresh Orders Raw Table" src="/sqlake-workshop/img/img1i.png" /></td>
+<td align="center"><img alt="Expand Properties" src="/sqlake-workshop/img/img1j.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>With the table selected, the right hand pane will show an events over time graph, along with some high level overview metrics</p>
+<p><img alt="Schema Statistics" src="/sqlake-workshop/img/img1k.png" /></p>
+<p>Scrolling down you can see a list of ingested fields.  SQLake has automatically inferred the data type of the incoming data, along with its density (how often it shows in each event), cardinality, top values, and when that field was first and last seen.  This is especially useful as schema’s evolve overtime.  In our example you can see that all fields were first and last scene at the same time.  If we run this ingestion over the next few months though, if a new field starts showing up in our data we may see that data was first seen a few days ago, or we may see that a field was last seen a few days ago.  Keeping tabs on this will help us know whether we may want to include, or exclude certain fields in our transformations, and/or update our transformations as our schema evolves.</p>
+<p>Now click on a specific field in the left hand catalog view, for example customer.address.state.  The field details will show some key overview metrics, but also give you a sampling of values that we’ve seen, along with their distribution within the data.  </p>
+<p><img alt="Schema Statistics Field" src="/sqlake-workshop/img/img1l.png" /></p>
+<p>Click through several fields and take note of any data “problems” that you see, for example 0 showing up in the nettotal column and the ordertype field having both upper and lower case values.</p>
+<p>Because SQLake is directly integrated with Amazon Athena, you can directly query your ingestion table from within a worksheet.  This is useful for verifying that data is being properly ingested, as well as for inspecting whether certain fields are as you expect.  Go ahead and run the SELECT * in the worksheet, and see how the result set appears in your worksheet. Note: it make take 3-4 mins for data to populate the table.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cm">/*</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cm">   Query your raw data in the staging table</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cm">   Note: It may take 3-4 minutes for the data to appear in your staging table.</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cm">*/</span><span class="w"></span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">default_glue_catalog</span><span class="p">.</span><span class="n">database_714130</span><span class="p">.</span><span class="n">orders_raw_data</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<img alt="Athena Results" src="/sqlake-workshop/img/img1l.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>
