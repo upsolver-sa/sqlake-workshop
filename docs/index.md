@@ -48,7 +48,6 @@ Continuing to the right, there is a SQL Snippet button to include common code bl
 
 | Catalog - Displays available connections |  |
 :--- | ---:
-
 | * By default, every user has two connections<br>Types of connections<br>* GLUE_CATALOG<br>* S3<br>* KINESIS<br>* KAFKA<br>* SNOWFLAKE<br> | ![SQLake UI Catalog View](/sqlake-workshop/img/img1e.png) |
 
 | Help and documentation |  |
