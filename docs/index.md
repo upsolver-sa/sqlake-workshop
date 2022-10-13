@@ -54,6 +54,28 @@ Continuing to the right, there is a SQL Snippet button to include common code bl
 :--- | ---:
 | ![SQLake Learn & Explore](/sqlake-workshop/img/img1f.png) | * Searchable documentation<br> * Ask general questions on Slack<br> * Contact support if something doesn’t work as expected |
 
+>Our Sample Data<br>
+>The sample data that we will use throughout this exercise is streaming orders data from a fictional e-commerce website.  We are working as data engineers and being asked to transform this data for a variety of purposes while populating a data lake for historical reporting
+
+**Take a look at your Worksheet (Template)**
+
+Step 1: Create connection to S3
+
+```sql
+/*
+   1. Create an S3 connection to manage IAM credentials for jobs that need to access data in S3
+*/
+CREATE S3 CONNECTION upsolver_s3_samples
+   AWS_ROLE = 'arn:aws:iam::949275490180:role/upsolver_samples_role'
+   EXTERNAL_ID = 'SAMPLES'
+   READ_ONLY = TRUE;
+```
+
+> To run a command:
+> Place your cursor within the command and click the Run button in the upper right
+Click the + button to the left of the line number, and select “Run Statement”
+> Press a keyboard shortcut (i.e. *<command + enter>* on Mac or *<control + enter>* on Windows
+
 ---
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
