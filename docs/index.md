@@ -46,22 +46,10 @@ The center of the title bar shows you the worksheet that you are currently worki
 
 Continuing to the right, there is a SQL Snippet button to include common code blocks into your worksheet, and finally a “Preview Job” and “Run” button that we will see in action later in the workshop.
 
-![SQLake UI Catalog View](/sqlake-workshop/img/img1e.png)
+| Catalog - Displays available connections |  |
+:--- | ---:
 
-Catalog - Displays available connections
-
-* By default, every user has two connections
-    ** default_glue_catalog
-    ** SystemTables
-
-Types of connections
-
-* GLUE_CATALOG
-* S3
-* KINESIS
-* KAFKA
-* SNOWFLAKE
-
+| * By default, every user has two connections<br>Types of connections<br>* GLUE_CATALOG<br>* S3<br>* KINESIS<br>* KAFKA<br>* SNOWFLAKE<br> | ![SQLake UI Catalog View](/sqlake-workshop/img/img1e.png) |
 
 | Help and documentation |  |
 :--- | ---:
